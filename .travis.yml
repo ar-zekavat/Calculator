@@ -5,7 +5,7 @@ service:
 #this is a comment
 
 before_install:
-  - docker build -t alirezazekvat\Calculator -f Dockerfile.dev .
+  - docker build  -f Dockerfile.dev .
 
 
 script:
