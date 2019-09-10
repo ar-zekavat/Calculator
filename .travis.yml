@@ -9,4 +9,4 @@ before_install:
 
 
 script:
-  - docker run alirezazekvat\Calculator npm run coverage
+  - docker run npm run coverage
