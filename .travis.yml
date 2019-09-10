@@ -5,8 +5,8 @@ service:
 #this is a comment
 
 before_install:
-  - docker build -t alirezazekvat/Calculator -f Dockerfile.dev .
+  - docker build -t mytest -f Dockerfile.dev .
 
 
 script:
-  - docker run alirezazekvat/Calculator npm run test
+  - docker run mytest npm run test
