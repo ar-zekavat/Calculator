@@ -9,4 +9,4 @@ before_install:
 
 
 script:
-  - docker run mytest npm run covarage
+  - docker run mytest npm run coverage
