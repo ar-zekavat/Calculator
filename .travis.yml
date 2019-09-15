@@ -5,8 +5,13 @@ service:
 #this is a comment
 
 before_install:
-  - docker build -t mytest -f Dockerfile.dev .
+  - docker build -t alirezazekvat/calculator -f Dockerfile.dev .
 
 
 script:
-  - docker run mytest npm run coverage
+  - docker run alirezazekvat/calculator npm run coverage
+
+  #Log in to docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take this images and push them to dockerhub
+  - docker push alirezazekvat/calculator
